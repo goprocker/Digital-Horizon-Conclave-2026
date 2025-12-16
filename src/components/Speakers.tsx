@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Linkedin } from "lucide-react";
+import styles from "./CardEffects.module.css";
 
 const speakersData = {
     day4: [
@@ -122,10 +123,10 @@ export default function Speakers() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.container}`}
                         >
                             {speakersData[activeDay as keyof typeof speakersData].map((speaker: any, index) => (
-                                <div key={index} className="glass rounded-xl overflow-hidden group hover:border-primary/50 transition-colors border border-white/10">
+                                <div key={index} className={`glass rounded-xl overflow-hidden group hover:border-primary/50 border border-white/10 ${styles.card}`}>
                                     <div className="p-6">
                                         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-blue-600 p-[2px] mb-4 mx-auto">
                                             <div className="w-full h-full rounded-full overflow-hidden bg-black">

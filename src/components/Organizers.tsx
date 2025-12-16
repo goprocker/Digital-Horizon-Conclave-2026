@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./CardEffects.module.css";
+
 const organizers = [
     { role: "Chief Patrons", names: ["Dr. Mariazeena Johnson (Chancellor)", "Dr. Marie Johnson (President)", "Ms. Maria Catherine Johnson (Vice President)"] },
     { role: "Patrons", names: ["Dr. T. Sasipraba (Vice Chancellor)"] },
@@ -18,9 +20,9 @@ export default function Organizers() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.container}`}>
                     {organizers.map((group, index) => (
-                        <div key={index} className="glass p-6 rounded-xl border border-white/5 text-center hover:border-primary/30 transition-colors">
+                        <div key={index} className={`glass p-6 rounded-xl border border-white/5 text-center hover:border-primary/30 ${styles.card}`}>
                             <h3 className="text-xl font-bold text-primary mb-4 uppercase tracking-wider">{group.role}</h3>
                             <ul className="space-y-2">
                                 {group.names.map((name, idx) => (

@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Mic, Cpu, Gamepad2, Layers, Briefcase } from "lucide-react";
 
+import styles from "./CardEffects.module.css";
+
 const highlights = [
     {
         icon: <Mic size={40} />,
@@ -42,7 +44,7 @@ export default function Highlights() {
                     <p className="text-gray-400">What makes Digital Horizon Conclave unique?</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.container}`}>
                     {highlights.map((item, index) => (
                         <motion.div
                             key={index}
@@ -50,7 +52,7 @@ export default function Highlights() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass p-8 rounded-2xl hover:bg-white/5 transition-all hover:scale-105 border border-white/5 group"
+                            className={`glass p-8 rounded-2xl hover:bg-white/5 border border-white/5 group ${styles.card}`}
                         >
                             <div className="text-primary mb-6 p-4 bg-primary/10 rounded-full inline-block group-hover:bg-primary group-hover:text-black transition-colors">
                                 {item.icon}

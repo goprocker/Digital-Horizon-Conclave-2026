@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
+import styles from "./CardEffects.module.css";
 
 const scheduleData = [
     {
@@ -60,9 +61,9 @@ export default function Schedule() {
                             </div>
 
                             {/* Timeline Items */}
-                            <div className="space-y-6 relative border-l-2 border-white/10 md:border-none pl-6 md:pl-0">
+                            <div className={`space-y-6 relative border-l-2 border-white/10 md:border-none pl-6 md:pl-0 ${styles.container}`}>
                                 {day.events.map((event, index) => (
-                                    <div key={index} className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
+                                    <div key={index} className={`flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-4 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/5 ${styles.card}`}>
                                         <div className="flex items-center gap-4 md:w-1/3">
                                             <Clock size={18} className="text-primary" />
                                             <span className="text-white font-mono">{event.time}</span>
