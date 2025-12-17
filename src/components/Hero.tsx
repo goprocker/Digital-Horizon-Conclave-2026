@@ -1,66 +1,19 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import SecureSpotButton from "./SecureSpotButton";
+import FluidHoverReveal from "./FluidHoverReveal";
 
 export default function Hero() {
-    // Mouse position state
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    // Smooth spring animation for premium feel
-    const springConfig = { damping: 25, stiffness: 100, mass: 0.5 }; // "TitanGate" smooth feel
-    const springX = useSpring(mouseX, springConfig);
-    const springY = useSpring(mouseY, springConfig);
-
-    // Layer Transforms (Parallax Effects)
-    const auroraX = useTransform(springX, [-0.5, 0.5], ["-5%", "5%"]);
-    const auroraY = useTransform(springY, [-0.5, 0.5], ["-5%", "5%"]);
-
-    const blob1X = useTransform(springX, [-0.5, 0.5], ["-8%", "8%"]);
-    const blob1Y = useTransform(springY, [-0.5, 0.5], ["-8%", "8%"]);
-
-    const blob2X = useTransform(springX, [-0.5, 0.5], ["8%", "-8%"]); // Moves opposite
-    const blob2Y = useTransform(springY, [-0.5, 0.5], ["8%", "-8%"]);
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-        const { clientX, clientY, currentTarget } = e;
-        const { width, height } = currentTarget.getBoundingClientRect();
-
-        // Normalize coordinates to range [-0.5, 0.5]
-        const x = (clientX / width) - 0.5;
-        const y = (clientY / height) - 0.5;
-
-        mouseX.set(x);
-        mouseY.set(y);
-    };
-
-
     return (
         <section
             id="hero"
             className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
-            onMouseMove={handleMouseMove}
         >
-            {/* Unicorn Studio Animation Background */}
-            <div
-                data-us-project="xbdff3O7QjNIzf5H0zWe"
-                data-us-scale="1"
-                data-us-dpi="1.5"
-                data-us-production="false"
-                data-us-lazyload="false"
-                data-us-alttext="Interactive hero animation"
-                data-us-arialabel="Digital Horizon Conclave hero background"
-                style={{
-                    position: 'absolute',
-                    inset: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 0,
-                }}
-            />
+            {/* Fluid Hover Reveal Background */}
+            <FluidHoverReveal />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pointer-events-none">
                 <motion.div
