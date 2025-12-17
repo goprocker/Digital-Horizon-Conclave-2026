@@ -7,6 +7,7 @@ import Schedule from "@/components/Schedule";
 import Registration from "@/components/Registration";
 import Organizers from "@/components/Organizers";
 import Accreditation from "@/components/Accreditation";
+import SecureSpotCTA from "@/components/SecureSpotCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Registration />
       <Organizers />
       <Accreditation />
+      <SecureSpotCTA />
       <Footer />
     </main>
   );

@@ -1,27 +1,73 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
+import SecureSpotButton from "./SecureSpotButton";
 
 export default function Hero() {
+    // Mouse position state
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    // Smooth spring animation for premium feel
+    const springConfig = { damping: 25, stiffness: 100, mass: 0.5 }; // "TitanGate" smooth feel
+    const springX = useSpring(mouseX, springConfig);
+    const springY = useSpring(mouseY, springConfig);
+
+    // Layer Transforms (Parallax Effects)
+    const auroraX = useTransform(springX, [-0.5, 0.5], ["-5%", "5%"]);
+    const auroraY = useTransform(springY, [-0.5, 0.5], ["-5%", "5%"]);
+
+    const blob1X = useTransform(springX, [-0.5, 0.5], ["-8%", "8%"]);
+    const blob1Y = useTransform(springY, [-0.5, 0.5], ["-8%", "8%"]);
+
+    const blob2X = useTransform(springX, [-0.5, 0.5], ["8%", "-8%"]); // Moves opposite
+    const blob2Y = useTransform(springY, [-0.5, 0.5], ["8%", "-8%"]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+        const { clientX, clientY, currentTarget } = e;
+        const { width, height } = currentTarget.getBoundingClientRect();
+
+        // Normalize coordinates to range [-0.5, 0.5]
+        const x = (clientX / width) - 0.5;
+        const y = (clientY / height) - 0.5;
+
+        mouseX.set(x);
+        mouseY.set(y);
+    };
+
+
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-            {/* Background Effects */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-background mix-blend-overlay opacity-90"></div>
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-pulse delay-1000"></div>
-            </div>
+        <section
+            id="hero"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+            onMouseMove={handleMouseMove}
+        >
+            {/* Unicorn Studio Animation Background */}
+            <div
+                data-us-project="xbdff3O7QjNIzf5H0zWe"
+                data-us-scale="1"
+                data-us-dpi="1.5"
+                data-us-production="false"
+                data-us-lazyload="false"
+                data-us-alttext="Interactive hero animation"
+                data-us-arialabel="Digital Horizon Conclave hero background"
+                style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 0,
+                }}
+            />
 
-            {/* Grid Pattern Overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pointer-events-none">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
+                    className="pointer-events-auto"
                 >
                     <div className="flex flex-col items-center gap-4 mb-6">
                         <span className="text-primary font-bold tracking-widest text-sm md:text-base uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -55,12 +101,7 @@ export default function Hero() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="#register"
-                            className="inline-flex items-center justify-center gap-2 bg-primary text-black px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]"
-                        >
-                            Register Now <ArrowRight size={20} />
-                        </Link>
+                        <SecureSpotButton />
                         <Link
                             href="#schedule"
                             className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:bg-white/10 hover:border-white/30 backdrop-blur-sm"
