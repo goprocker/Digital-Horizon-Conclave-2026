@@ -16,7 +16,7 @@ import React, { useEffect, useRef } from "react";
 export default function FluidHoverReveal() {
     const containerRef = useRef<HTMLDivElement>(null);
     const revealImageRef = useRef<HTMLImageElement>(null);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number | null>(null);
 
     // Animation state refs (mutable across renders without triggering re-renders)
     const state = useRef({
