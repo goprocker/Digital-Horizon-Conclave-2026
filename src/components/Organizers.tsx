@@ -4,7 +4,7 @@ import styles from "./CardEffects.module.css";
 
 const organizers = [
     { role: "Chief Patrons", names: ["Dr. Mariazeena Johnson (Chancellor)", "Dr. Marie Johnson (President)", "Ms. Maria Catherine Johnson (Vice President)"] },
-    { role: "Patrons", names: ["Dr. T. Sasipraba (Vice Chancellor)"] },
+
     { role: "Convenors", names: ["Dr. L. Lakshmanan (HOD, CSE)", "Dr. P. Ajitha (HOD, SPEC)"] },
     { role: "Faculty Co-ordinators", names: ["Ms. S. Balapriya", "Ms. J. Refonaa", "Ms. Sylvia Grace", "Ms. U.A. Ranjini", "Ms. Shanmugaa Priyaa", "Ms. Priya Lakshmi"] },
     { role: "Student Co-ordinators", names: ["Nangaiyar (II Yr - AI & Robotics)", "Dharshana K. S (II Yr - AI & Robotics)", "Gopinath (I Yr - AI)"] },

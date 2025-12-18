@@ -45,10 +45,11 @@ const speakersData = {
             linkedin: "https://www.linkedin.com/in/marioroyston/",
         },
         {
-            name: "Joshua",
+            name: "Joshua Jebadurai",
             role: "Game Developer, Weloadin",
             topic: "Next-Gen Gaming: A Technological Leap or a Creative Shift?",
-            image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Joshua", // Placeholder
+            image: "/JoshuaJebadurai.jpg", // Local image
+            linkedin: "https://www.linkedin.com/in/joshuajebadurai/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
     ],
     day6: [
