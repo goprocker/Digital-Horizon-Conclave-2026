@@ -6,7 +6,7 @@ import { Linkedin } from "lucide-react";
 import styles from "./CardEffects.module.css";
 
 const speakersData = {
-    day4: [
+    day1: [
         {
             name: "Kavitha Kalyan",
             role: "Director of Design, TCS",
@@ -29,7 +29,7 @@ const speakersData = {
             linkedin: "https://www.linkedin.com/in/sridhar-sankar-a66810140/",
         },
     ],
-    day5: [
+    day2: [
         {
             name: "Vinod Kumar V",
             role: "Senior L&D Professional, Phantom FX",
@@ -52,7 +52,7 @@ const speakersData = {
             linkedin: "https://www.linkedin.com/in/joshuajebadurai/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
     ],
-    day6: [
+    day3: [
         {
             name: "Aravind Neelakandan",
             role: "Evangelist, Epic Games",
@@ -78,13 +78,13 @@ const speakersData = {
 };
 
 const days = [
-    { id: "day4", label: "Day 4", date: "Feb 4" },
-    { id: "day5", label: "Day 5", date: "Feb 5" },
-    { id: "day6", label: "Day 6", date: "Feb 6" },
+    { id: "day1", label: "Day 1", date: "Feb 23" },
+    { id: "day2", label: "Day 2", date: "Feb 24" },
+    { id: "day3", label: "Day 3", date: "Feb 25" },
 ];
 
 export default function Speakers() {
-    const [activeDay, setActiveDay] = useState("day4");
+    const [activeDay, setActiveDay] = useState("day1");
 
     return (
         <section id="speakers" className="py-20 bg-background relative">

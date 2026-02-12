@@ -6,8 +6,8 @@ import styles from "./CardEffects.module.css";
 
 const scheduleData = [
     {
-        day: "Day 4",
-        date: "Feb 4, 2026",
+        day: "Day 1",
+        date: "Feb 23, 2026",
         events: [
             { time: "10:00 AM", title: "Inauguration Ceremony", location: "Main Auditorium" },
             { time: "11:30 AM", title: "Keynote: Beyond the Screen", location: "Hall A" },
@@ -15,8 +15,8 @@ const scheduleData = [
         ],
     },
     {
-        day: "Day 5",
-        date: "Feb 5, 2026",
+        day: "Day 2",
+        date: "Feb 24, 2026",
         events: [
             { time: "10:00 AM", title: "Panel: AI Ethics", location: "Hall B" },
             { time: "11:30 AM", title: "Exhibition: Robotics Showcase", location: "Expo Center" },
@@ -24,8 +24,8 @@ const scheduleData = [
         ],
     },
     {
-        day: "Day 6",
-        date: "Feb 6, 2026",
+        day: "Day 3",
+        date: "Feb 25, 2026",
         events: [
             { time: "10:00 AM", title: "Gaming Tournament Finals", location: "Gaming Arena" },
             { time: "01:00 PM", title: "Closing Keynote & Awards", location: "Main Auditorium" },

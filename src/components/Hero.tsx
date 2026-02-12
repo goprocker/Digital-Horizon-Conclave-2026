@@ -41,7 +41,7 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm md:text-base text-gray-400">
                         <div className="flex items-center gap-2">
                             <Calendar className="text-primary" size={20} />
-                            <span>Feb 4-6, 2026</span>
+                            <span>Feb 23-25, 2026</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Clock className="text-primary" size={20} />
