@@ -4,10 +4,9 @@ import styles from "./CardEffects.module.css";
 
 const organizers = [
     { role: "Chief Patrons", names: ["Dr. Mariazeena Johnson (Chancellor)", "Dr. Marie Johnson (President)", "Ms. Maria Catherine Johnson (Vice President)"] },
-
-    { role: "Convenors", names: ["Dr. L. Lakshmanan (DEAN, CSE)", "Dr. P. Ajitha (HOD, SPEC)"] },
-    { role: "Faculty Co-ordinators", names: ["Ms. S. Balapriya", "Ms. J. Refonaa", "Ms. Sylvia Grace", "Ms. U.A. Ranjini", "Ms. Shanmugaa Priyaa", "Ms. Priya Lakshmi"] },
-    { role: "Student Co-ordinators", names: ["Nangaiyar (II Yr - AI & Robotics)", "Dharshana K. S (II Yr - AI & Robotics)", "Gopinath (I Yr - AI)"] },
+    { role: "Convenors", names: ["Dr. L. Lakshmanan (Dean, School of Computing)", "Dr. P. Ajitha (HOD, CSE-AI, BCT, CS, IOT)", "Dr. Senduru Srinivasalu (HOD, CSE-AIML, DS, AIR)"] },
+    { role: "Faculty Co-ordinators", names: ["Dr. S. Balapriya (Assistant Professor, CSE)", "Ms. U.A. Ranjini (Assistant Professor, CSE)", "Dr. I.S. Beschi (Assistant Professor, CSE)", "Ms. S. Hemavathi (Assistant Professor, CSE)", "Dr. D. Jerusha (Assistant Professor, CSE)"] },
+    { role: "Student Co-ordinators", names: ["Ms. M. Nangaiyar (II Yr, AI&RO)", "Ms. Nikitha Juliet (I Yr, CS-BS)", "Mr. Srinivas (I Yr, AI-DS)", "Mr. Gopinath (I Yr, AI)"] },
 ];
 
 export default function Organizers() {
