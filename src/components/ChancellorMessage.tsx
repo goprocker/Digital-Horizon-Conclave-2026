@@ -19,7 +19,7 @@ export default function ChancellorMessage() {
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white/10 shadow-2xl overflow-hidden group">
                             <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors duration-300 z-10" />
                             <Image
-                                src="/chancellor.jpg"
+                                src="/chancellor.webp"
                                 alt="Dr. Mariezenna Johnson"
                                 fill
                                 className="object-cover"

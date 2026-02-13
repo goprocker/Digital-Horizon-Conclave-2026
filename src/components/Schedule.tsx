@@ -9,26 +9,27 @@ const scheduleData = [
         day: "Day 1",
         date: "Feb 23, 2026",
         events: [
-            { time: "10:00 AM", title: "Inauguration Ceremony", location: "Main Auditorium" },
-            { time: "11:30 AM", title: "Keynote: Beyond the Screen", location: "Hall A" },
-            { time: "02:00 PM", title: "Workshop: UI/UX Trends", location: "Lab 1" },
+            { time: "10:30 - 11:30 AM", title: "Beyond the Screen: How UI/UX is Redefining Digital Reality", location: "Kavitha Kalyan" },
+            { time: "11:45 - 1:00 PM", title: "Generative AI Unleashed: A Tool for Automation or a New Intelligence?", location: "Deepan Raj" },
+            { time: "2:00 - 3:00 PM", title: "Next-Gen Robotics: Bridging the Gap Between Humans and Machines", location: "Sridhar Shankar" },
         ],
     },
     {
         day: "Day 2",
         date: "Feb 24, 2026",
         events: [
-            { time: "10:00 AM", title: "Panel: AI Ethics", location: "Hall B" },
-            { time: "11:30 AM", title: "Exhibition: Robotics Showcase", location: "Expo Center" },
-            { time: "02:00 PM", title: "Hackathon Kickoff", location: "Tech Park" },
+            { time: "10:00 - 11:30 AM", title: "Human-Centric Design: The Secret Code to Digital Success", location: "Vinod Kumar V" },
+            { time: "11:45 - 1:00 PM", title: "The Psychology of Play: How Game Design Hooks the Mind", location: "Mario Royston" },
+            { time: "2:00 - 3:00 PM", title: "Next Level Gaming: Navigating the Technological Leap or a Narrative Shift?", location: "Joshua" },
         ],
     },
     {
         day: "Day 3",
         date: "Feb 25, 2026",
         events: [
-            { time: "10:00 AM", title: "Gaming Tournament Finals", location: "Gaming Arena" },
-            { time: "01:00 PM", title: "Closing Keynote & Awards", location: "Main Auditorium" },
+            { time: "10:00 - 11:30 AM", title: "Building Worlds: The Power of Unreal in Modern Simulation", location: "Aravind Neelakandan" },
+            { time: "11:45 - 1:00 PM", title: "Extended Reality: Blurring the Lines Between Physical and Digital", location: "Ganesh R" },
+            { time: "2:00 - 3:00 PM", title: "Smart World: How Intelligent IoT is Reshaping Our Lives", location: "Jai Naresh" },
         ],
     },
 ];
