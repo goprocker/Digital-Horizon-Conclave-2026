@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
-  { name: "Key Dates", href: "#dates" },
   { name: "Highlights", href: "#highlights" },
   { name: "Speakers", href: "#speakers" },
   { name: "Schedule", href: "#schedule" },
@@ -20,11 +19,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-      <div className="w-full max-w-7xl bg-[#1a1f26]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-2 shadow-2xl flex items-center justify-between">
+    <nav className="fixed top-8 left-0 right-0 z-50 flex justify-center px-4">
+      <div className="w-full max-w-7xl bg-[#1a1f26]/80 backdrop-blur-md border border-white/10 rounded-full px-8 py-3 shadow-2xl flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 pl-2">
-          <Link href="/" className="text-xl font-bold tracking-tighter text-white">
+          <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
             DHC<span className="text-[#00abfb]">2026</span>
           </Link>
         </div>
@@ -35,7 +34,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-white transition-colors px-3 py-1.5 rounded-full text-xs font-medium"
+              className="text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-full text-sm font-medium"
             >
               {link.name}
             </Link>
@@ -45,7 +44,7 @@ export default function Navbar() {
 
           <Link
             href="#register"
-            className="bg-[#00abfb] hover:bg-[#0091d5] text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-[#00abfb]/20"
+            className="bg-[#00abfb] hover:bg-[#0091d5] text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-[#00abfb]/20"
           >
             Registration
           </Link>
@@ -55,7 +54,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-4">
           <Link
             href="#register"
-            className="bg-[#00abfb] text-white px-4 py-1.5 rounded-full font-bold text-xs uppercase"
+            className="bg-[#00abfb] text-white px-5 py-2 rounded-full font-bold text-xs uppercase"
           >
             Register
           </Link>
@@ -63,7 +62,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-full text-gray-300 hover:text-white focus:outline-none"
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
