@@ -21,8 +21,8 @@ export default function Registration() {
                 <div className="glass p-8 rounded-2xl border border-white/10 max-w-md w-full relative mx-auto">
                     <h3 className="text-2xl font-bold text-white mb-4">Scan to Register</h3>
                     <div className="bg-white p-4 w-60 h-60 mx-auto rounded-lg mb-4 flex items-center justify-center">
-                        {/* Use qecode.png as requested */}
-                        <img src="/qecode.png" alt="Registration QR Code" className="w-full h-full object-contain" />
+                        {/* Use QRCODE.jpeg as requested */}
+                        <img src="/QRCODE.jpeg" alt="Registration QR Code" className="w-full h-full object-contain" />
                     </div>
                     <p className="text-sm text-gray-400">Scan this QR code with your phone</p>
                 </div>

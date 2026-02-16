@@ -69,7 +69,7 @@ export default function SecureSpotCTA() {
                         >
                             <div className="bg-white p-4 rounded-2xl shadow-xl">
                                 <Image
-                                    src="/qecode.png"
+                                    src="/QRCODE.jpeg"
                                     alt="Registration QR Code"
                                     width={200}
                                     height={200}
