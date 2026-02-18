@@ -13,6 +13,7 @@ const speakersData = {
             topic: "Beyond the Screen: How UI/UX is Redefining Digital Reality",
             image: "/KavithaKalyan.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/kavithakalyan/",
+            time: "10:30 - 11:30 AM"
         },
         {
             name: "Deepan Raj",
@@ -20,6 +21,7 @@ const speakersData = {
             topic: "Generative AI Unleashed: A Tool for Automation or a New Intelligence?",
             image: "/DeepanRaj.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/deepanrajm/",
+            time: "11:45 - 1:00 PM"
         },
         {
             name: "Sridhar Shankar",
@@ -27,6 +29,7 @@ const speakersData = {
             topic: "Next-Gen Robotics: Bridging the Gap Between Humans and Machines",
             image: "/SridharSankar.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/sridhar-sankar-a66810140/",
+            time: "2:00 - 3:00 PM"
         },
     ],
     day2: [
@@ -36,6 +39,7 @@ const speakersData = {
             topic: "Human-Centric Design: The Secret Code to Digital Success",
             image: "/VinodKumar.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/vinodkumar0205/",
+            time: "10:00 - 11:30 AM"
         },
         {
             name: "Mario Royston",
@@ -43,6 +47,7 @@ const speakersData = {
             topic: "The Psychology of Play: How Game Design Hooks the Mind",
             image: "/MarioRoyston.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/marioroyston/",
+            time: "11:45 - 1:00 PM"
         },
         {
             name: "Joshua Jebadurai",
@@ -50,15 +55,17 @@ const speakersData = {
             topic: "Next-Gen Gaming: A Technological Leap or a Creative Shift?",
             image: "/JoshuaJebadurai.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/joshuajebadurai/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            time: "2:00 - 3:00 PM"
         },
     ],
     day3: [
         {
-            name: "Aravind Neelakandan",
-            role: "Evangelist, Epic Games",
-            topic: "Building Worlds: The Power of Unreal in Modern Simulation",
-            image: "/ArvindNeelakantan.jpg", // Local image
-            linkedin: "https://www.linkedin.com/in/arvindsabaneel/",
+            name: "Ms. Gayathri Shri",
+            role: "Creative director, Agreal studios",
+            topic: "SnapAR: The Next Generation of Social Augmented Reality",
+            image: "/Gayathri Shri.jpg", // Local image
+            linkedin: "",
+            time: "10:30 - 11:30 AM"
         },
         {
             name: "Ganesh R",
@@ -66,6 +73,7 @@ const speakersData = {
             topic: "Extended Reality: Blurring the Lines Between Physical and Digital",
             image: "/GaneshR.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/ganesh-r-82a05293/",
+            time: "11:45 - 1:00 PM"
         },
         {
             name: "Jai Naressh",
@@ -73,6 +81,7 @@ const speakersData = {
             topic: "Smart World: How Intelligent IoT is Reshaping Our Lives",
             image: "/JainaresshBC.jpg", // Local image
             linkedin: "https://www.linkedin.com/in/jaibc/",
+            time: "2:00 - 3:00 PM"
         },
     ],
 };
@@ -138,10 +147,13 @@ export default function Speakers() {
                                         <div className="text-center">
                                             <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{speaker.name}</h3>
                                             <p className="text-primary text-sm mb-2">{speaker.role}</p>
-                                            <div className="flex justify-center mb-4">
-                                                <a href={speaker.linkedin || "#"} className="text-gray-400 hover:text-[#0077b5] transition-colors" target={speaker.linkedin ? "_blank" : undefined} rel={speaker.linkedin ? "noopener noreferrer" : undefined}>
-                                                    <Linkedin size={18} />
-                                                </a>
+                                            {speaker.time && <p className="text-gray-300 text-xs mb-2">{speaker.time}</p>}
+                                            <div className="flex justify-center mb-4 min-h-[18px]">
+                                                {speaker.linkedin && (
+                                                    <a href={speaker.linkedin} className="text-gray-400 hover:text-[#0077b5] transition-colors" target="_blank" rel="noopener noreferrer">
+                                                        <Linkedin size={18} />
+                                                    </a>
+                                                )}
                                             </div>
                                             <hr className="border-white/10 mb-4" />
                                             <p className="text-gray-300 text-sm italic">&quot;{speaker.topic}&quot;</p>
