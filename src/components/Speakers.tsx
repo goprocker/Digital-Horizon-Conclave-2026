@@ -64,7 +64,7 @@ const speakersData = {
             role: "Creative director, Agreal studios",
             topic: "SnapAR: The Next Generation of Social Augmented Reality",
             image: "/Gayathri Shri.jpg", // Local image
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/gayathrishri/",
             time: "10:30 - 11:30 AM"
         },
         {
