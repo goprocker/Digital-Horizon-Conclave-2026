@@ -1,4 +1,9 @@
-# 🌐 Digital Horizon Conclave 2026
+# Digital Horizon Conclave 2026 ⚡
+> **AI-Inspired Futuristic Event Platform for a National-Level Technical Symposium**
+
+Digital Horizon Conclave 2026 is a full-stack, **premium single-page event portal** — a live, interactive web experience that fuses fluid physics-based animations, real-time UI transitions, glassmorphic design, and a 15-component Next.js architecture into a unified, production-ready symposium platform for Sathyabama Institute of Science and Technology.
+
+The platform is purpose-built for the **DHC 2026 symposium** — a 3-day national-level technical event themed around *the convergence of AI, Gaming, and Smart Realities*. It combines a futuristic Orbitron-powered design system, Framer Motion scroll orchestration, custom canvas-like fluid hover physics, and a tabbed speaker pipeline to deliver a world-class event web experience.
 
 <div align="center">
 
@@ -8,354 +13,163 @@
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?style=for-the-badge&logo=tailwindcss)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-E91E8C?style=for-the-badge&logo=framer)
 
-**The Convergence of AI, Gaming, and Smart Realities**
-*A National Level Technical Symposium — Sathyabama Institute of Science & Technology*
-
-📅 **Feb 23–25, 2026** &nbsp;|&nbsp; ⏰ **10:00 AM Onwards** &nbsp;|&nbsp; 📍 **Sathyabama Institute, Chennai**
+📅 **Feb 23–25, 2026** &nbsp;|&nbsp; ⏰ **10:00 AM Onwards** &nbsp;|&nbsp; 📍 **Sathyabama Institute of Science & Technology, Chennai**
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 👥 Team Details & Project Metadata
 
-- [Overview](#-overview)
-- [Tech Stack](#-tech-stack)
-- [Project Architecture](#-project-architecture)
-- [System Architecture](#-system-architecture)
-- [Digital System Workflow](#-digital-system-workflow)
-- [Folder Structure](#-folder-structure)
-- [Component Breakdown](#-component-breakdown)
-- [Design System](#-design-system)
-- [Key Features](#-key-features)
-- [Event Schedule](#-event-schedule)
-- [Speakers](#-speakers)
-- [Getting Started](#-getting-started)
-- [Scripts](#-scripts)
-- [Deployment](#-deployment)
+- **Project Name:** Digital Horizon Conclave 2026
+- **Event Theme:** The Convergence of AI, Gaming, and Smart Realities
+- **Organizing Body:** School of Computing — Dept. of Computer Science & Engineering, Sathyabama Institute of Science and Technology
+- **Repository:** [https://github.com/goprocker/Digital-Horizon-Conclave-2026](https://github.com/goprocker/Digital-Horizon-Conclave-2026)
+
+### 👨‍💻 Development Team
+
+| # | Name | Role / Focus Area | GitHub Profile |
+|:-:|---|---|---|
+| 1 | **GOPINATH R** | Team Lead, Frontend Architecture & UI Engineering | [@goprocker](https://github.com/goprocker) |
 
 ---
 
-## 🎯 Overview
+## ❓ Problem Statement & Solution
 
-**Digital Horizon Conclave 2026** is the official event website for a premier **National-Level Technical Symposium** organized by the *School of Computing, Department of Computer Science & Engineering* at **Sathyabama Institute of Science and Technology**.
+### 🔴 The Problem
 
-The website serves as a fully-featured, single-page event portal covering:
+National-level technical symposiums at academic institutions consistently suffer from fragmented, low-quality digital presence:
 
-- 🤖 Artificial Intelligence & Generative AI
-- 🎮 Game Design & Development
-- 🥽 Extended Reality (XR / AR / VR)
-- 🦾 Robotics & Automation
-- 🎨 UI/UX Design
-- 🌐 Internet of Things (IoT)
+- **Static Brochure Websites:** Most event sites are simple HTML pages with static text and zero interactivity — failing to reflect the innovation the events represent.
+- **Poor Mobile Experience:** Non-responsive layouts break on student mobile devices, the primary device for event discovery.
+- **No Visual Identity:** Generic Bootstrap templates cannot convey a futuristic tech-event's brand — losing attendee interest in seconds.
+- **Data Fragmentation:** Speaker profiles, session schedules, and registration information are scattered across multiple Google Forms, WhatsApp groups, and PDF circulars.
+- **Zero Engagement Design:** Traditional event websites have no animations, no interactive maps, and no dynamic content — resulting in extremely low registration conversion rates.
 
-Built with a **dark futuristic theme**, neon accents, glassmorphism effects, and fluid physics-based animations to create a premium digital experience.
+### 🟢 The Solution: Digital Horizon Conclave 2026 Portal
 
----
+The DHC 2026 portal bridges design fragmentation and user disengagement through a real-time, animated, single-page experience:
 
-## 🛠️ Tech Stack
-
-| Category | Technology | Version | Purpose |
-|---|---|---|---|
-| **Framework** | Next.js | 16.0.10 | App Router, SSR, routing, image optimization |
-| **UI Library** | React | 19.2.1 | Component model, hooks |
-| **Language** | TypeScript | ^5 | Type safety across all components |
-| **Styling** | Tailwind CSS | ^4 | Utility-first CSS, responsive design |
-| **Animations** | Framer Motion | ^12.23.26 | Scroll animations, transitions, `AnimatePresence` |
-| **Icons** | Lucide React | ^0.561.0 | SVG icon set (Calendar, Clock, MapPin, Linkedin, etc.) |
-| **Fonts** | Google Fonts | via `next/font` | Geist, Geist Mono, Orbitron |
-| **Background FX** | Unicorn Studio | v1.5.3 (CDN) | Animated interactive background scenes |
-| **Linting** | ESLint | ^9 | Code quality with `eslint-config-next` |
-| **PostCSS** | @tailwindcss/postcss | ^4 | Tailwind compilation |
+1. **Unified Information Architecture:** All event data — speakers, schedule, registration, organizers, accreditation — is assembled into a single scroll-driven page with anchor navigation.
+2. **Fluid Physics UI Engine:** A custom `requestAnimationFrame` loop with spring-physics morphing creates a premium interactive hero experience unlike any academic event website.
+3. **Brand-Consistent Design System:** A complete CSS token system (`--background`, `--primary`, `--accent`) enforces neon-cyan + deep-space aesthetic throughout all 15 components.
+4. **Framer Motion Orchestration:** Scroll-triggered `whileInView` animations and `AnimatePresence` transitions make the page feel alive and responsive to user behavior.
 
 ---
 
-## 🏗️ Project Architecture
+## ✨ Key Features
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                    Next.js App Router                            │
-│            src/app  (Server Components by default)               │
-└─────────────────────────┬────────────────────────────────────────┘
-                          │
-┌─────────────────────────▼────────────────────────────────────────┐
-│                  RootLayout  (layout.tsx)                        │
-│                                                                  │
-│  • Google Fonts: Geist / Geist Mono / Orbitron                   │
-│  • Global <Navbar /> (fixed floating pill)                       │
-│  • Unicorn Studio CDN Loader (afterInteractive scripts)          │
-│  • SEO Metadata export                                           │
-└─────────────────────────┬────────────────────────────────────────┘
-                          │
-┌─────────────────────────▼────────────────────────────────────────┐
-│                    Home Page  (page.tsx)                         │
-│                                                                  │
-│   Single-page layout — section render order:                     │
-│                                                                  │
-│   <Hero />             Full-screen landing + fluid reveal bg     │
-│   <ChancellorMessage/> Chancellor welcome card                   │
-│   <About />            Event description                         │
-│   <Highlights />       Key stats / feature highlights            │
-│   <Speakers />         3-day tabbed speaker cards                │
-│   <Schedule />         3-day event timeline                      │
-│   <Registration />     QR code + registration info               │
-│   <Organizers />       Organizing team                           │
-│   <Accreditation />    Institutional accreditation info          │
-│   <SecureSpotCTA />    Full-width final CTA                      │
-│   <Footer />           Footer with links & socials               │
-└──────────────────────────────────────────────────────────────────┘
-```
-
-### Rendering Strategy
-
-| Component | Mode | Reason |
-|---|---|---|
-| `page.tsx` | Server Component | Static export, no browser APIs |
-| `layout.tsx` | Server Component | Metadata + font injection |
-| `Navbar.tsx` | Client Component | `useState` for mobile menu toggle |
-| `Hero.tsx` | Client Component | Framer Motion animations |
-| `FluidHoverReveal.tsx` | Client Component | `useEffect` + `requestAnimationFrame` + DOM APIs |
-| `Speakers.tsx` | Client Component | `useState` for day tab switching |
-| `Schedule.tsx` | Client Component | Framer Motion `whileInView` |
-| All others | Client Component | Framer Motion scroll triggers |
+- **🖥️ Full-Screen Fluid Hero Section:** Interactive physics-based hover reveal animation with two layered backgrounds, spring deformation, and a 12-point morphing polygon clip-path mask.
+- **🎓 Chancellor's Welcome Panel:** Animated portrait card with Dr. Mariezenna Johnson's full official welcome message and glassmorphic styling.
+- **📖 About the Conclave:** Scroll-animated description of the event purpose, bridging AI, Gaming, XR, Robotics, UI/UX, and IoT for industry–academia convergence.
+- **✨ Event Highlights Grid:** Five animated highlight cards covering Expert Speakers, AI & Emerging Tech, Gaming & XR, Hands-on Insights, and Career-Focused networking.
+- **🎤 Distinguished Speakers — 3-Day Tabbed Grid:**
+  - *Day 1 (Feb 23):* Kavitha Kalyan (TCS), Deepan Raj (HCL), Sridhar Shankar (Intrino Robotics)
+  - *Day 2 (Feb 24):* Vinod Kumar V (Phantom FX), Mario Royston (Weloadin), Joshua Jebadurai (Weloadin)
+  - *Day 3 (Feb 25):* Ms. Gayathri Shri (Agreal Studios), Ganesh R (Monolith Asia), Jai Naressh (Cavin Infotech)
+- **📅 3-Day Event Timeline:** `whileInView`-animated schedule cards for all 9 sessions with time slots, session titles, and speaker affiliations.
+- **📲 QR Code Registration Portal:** Scan-to-register card with `QRCODE.jpeg` embedded for instant mobile registration.
+- **🏢 Organizers & Accreditation:** Organizing committee display and NAAC institutional accreditation section.
+- **🚀 SecureSpot CTA Engine:** Dual-placement animated call-to-action button (`SecureSpotButton` + `SecureSpotCTA`) driving registration conversion.
+- **📡 Unicorn Studio WebGL Background:** CDN-loaded animated WebGL scene (`unicornStudio.umd.js`) for immersive hero environments.
+- **🔡 Premium Typography System:** Orbitron (futuristic headings), Geist Sans (body), Geist Mono (time slots) — all loaded via `next/font` with zero layout shift.
+- **📱 Fully Responsive:** Mobile-first Tailwind breakpoints, animated hamburger menu with `AnimatePresence` dropdown for sub-`lg` viewports.
 
 ---
 
-## 🖥️ System Architecture
+## 💻 Tech Stack
 
-The system follows a **modern JAMstack-inspired architecture** — a statically generated Next.js frontend served via a CDN, with all data embedded at build time (no database or API server required).
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           DEPLOYMENT LAYER                                 │
-│                     Vercel / Netlify / Node.js Host                        │
-│                                                                            │
-│  ┌─────────────┐   ┌──────────────┐   ┌──────────────────────────────────┐  │
-│  │   CDN Edge  │   │  SSL / HTTPS │   │   Serverless Functions (SSR)    │  │
-│  │   Caching   │◄──│  Termination │◄──│   (if dynamic routes needed)    │  │
-│  └──────┬──────┘   └──────────────┘   └──────────────────────────────────┘  │
-│         │                                                                   │
-│         ▼                                                                   │
-│  ┌──────────────────────────────────────────────────────────────────────┐   │
-│  │                      STATIC ASSETS (.next/)                          │   │
-│  │  HTML · CSS · JS Bundles · Optimized Images · Fonts                  │   │
-│  └──────────────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                    ▲
-                                    │  npm run build
-                                    │
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          BUILD LAYER (CI/CD)                                │
-│                                                                            │
-│  ┌────────────────────────────────────────────────────────────────────┐     │
-│  │                    Next.js Compiler (SWC + Turbopack)              │     │
-│  │                                                                    │     │
-│  │  • TypeScript → JavaScript transpilation                           │     │
-│  │  • Tailwind CSS purging & minification                             │     │
-│  │  • Tree-shaking & code-splitting per route                         │     │
-│  │  • Static page generation (SSG) for "/"                            │     │
-│  │  • Image optimization (WebP/AVIF conversion)                       │     │
-│  │  • Font subsetting & self-hosting (next/font)                      │     │
-│  └────────────────────────────────────────────────────────────────────┘     │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                    ▲
-                                    │  Source Code
-                                    │
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                        APPLICATION LAYER                                    │
-│                                                                            │
-│  ┌──────────────┐    ┌───────────────┐    ┌──────────────────────────┐      │
-│  │  App Router  │    │  React 19     │    │   Framer Motion          │      │
-│  │  (Next.js)   │───▶│  Components   │───▶│   Animation Engine       │      │
-│  │              │    │  (15 modules) │    │   (scroll, transitions)  │      │
-│  └──────────────┘    └───────┬───────┘    └──────────────────────────┘      │
-│                              │                                              │
-│                   ┌──────────▼──────────┐                                   │
-│                   │   Tailwind CSS 4    │                                   │
-│                   │   Design Tokens     │                                   │
-│                   │   + Custom Utils    │                                   │
-│                   └─────────────────────┘                                   │
-│                                                                            │
-│  ┌──────────────────────────────────────────────────────────────────────┐   │
-│  │                     EXTERNAL SERVICES                                │   │
-│  │                                                                      │   │
-│  │  • Unicorn Studio CDN (v1.5.3) — Animated WebGL backgrounds          │   │
-│  │  • Google Fonts CDN — Geist, Geist Mono, Orbitron                    │   │
-│  │  • Lucide Icons (bundled) — SVG icon library                         │   │
-│  └──────────────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                    ▲
-                                    │  Static Data
-                                    │
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          DATA LAYER                                         │
-│                                                                            │
-│  ┌────────────────────┐  ┌────────────────┐  ┌────────────────────────┐     │
-│  │  Speaker Data      │  │  Schedule Data │  │  Static Assets         │     │
-│  │  (Speakers.tsx)    │  │  (Schedule.tsx)│  │  /public/*.jpg/webp    │     │
-│  │  9 speakers ×      │  │  3 days ×      │  │  Headshots, QR code,  │     │
-│  │  3 days, inline    │  │  3 sessions    │  │  backgrounds          │     │
-│  └────────────────────┘  └────────────────┘  └────────────────────────┘     │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-### Layer Summary
-
-| Layer | Purpose | Technologies |
-|---|---|---|
-| **Deployment** | Edge delivery, SSL, caching | Vercel CDN / Netlify Edge / any Node host |
-| **Build** | Compile, optimize, bundle | Next.js 16, SWC, Turbopack, PostCSS |
-| **Application** | UI rendering, interactivity, animations | React 19, Framer Motion 12, Tailwind CSS 4 |
-| **External Services** | Runtime-loaded assets | Unicorn Studio CDN, Google Fonts |
-| **Data** | Event content & media | Inline TypeScript objects + `/public/` images |
+| Category | Technology |
+|---|---|
+| **Frontend Framework** | Next.js 16, React 19, TypeScript 5 |
+| **Styling** | Tailwind CSS v4, Vanilla CSS Utilities (`globals.css`) |
+| **Animation Engine** | Framer Motion 12 (`motion`, `AnimatePresence`, `whileInView`) |
+| **Custom Physics** | `requestAnimationFrame` + Spring Physics + CSS `clip-path` polygon |
+| **Icons** | Lucide React v0.561 |
+| **Typography** | Google Fonts via `next/font` (Orbitron, Geist Sans, Geist Mono) |
+| **Background FX** | Unicorn Studio WebGL Engine v1.5.3 (CDN: jsDelivr) |
+| **CSS Module Effects** | `CardEffects.module.css` — CSS perspective 3D card tilt |
+| **Build Tooling** | SWC Compiler, PostCSS, `@tailwindcss/postcss` v4 |
+| **Linting** | ESLint v9, `eslint-config-next` 16.0.10 |
 
 ---
 
-## 🔄 Digital System Workflow
+## 🏗️ System Architecture
 
-This section describes the end-to-end workflow — from development to the user's browser.
+```mermaid
+flowchart TD
+    subgraph Clients ["🖥️ Client Tier (Browser)"]
+        Hero["Hero Section (FluidHoverReveal)"]
+        Nav["Floating Pill Navbar"]
+        SpeakerTab["Speakers Tab Switcher"]
+        ScheduleView["Schedule Timeline View"]
+        RegPortal["Registration QR Portal"]
+    end
 
-### 1. Development Workflow
+    subgraph AppLayer ["⚡ Next.js 16 App Router (src/app/)"]
+        Layout["RootLayout — layout.tsx\n(Fonts · Navbar · Unicorn Studio Scripts · Metadata)"]
+        Page["Home Page — page.tsx\n(Section Assembly Pipeline)"]
+        GlobalCSS["globals.css\n(CSS Tokens · Glass · Neon · Aurora · Noise)"]
+    end
 
-```
- ┌──────────────┐     ┌──────────────┐     ┌──────────────────┐
- │  Developer   │────▶│  Code Editor │────▶│  npm run dev     │
- │  (Gopinath)  │     │  (VS Code)   │     │  (localhost:3000) │
- └──────────────┘     └──────────────┘     └────────┬─────────┘
-                                                     │
-                                                     ▼
-                                            ┌────────────────┐
-                                            │  Hot Module     │
-                                            │  Replacement    │
-                                            │  (HMR - Instant │
-                                            │   live preview) │
-                                            └────────────────┘
-```
+    subgraph Components ["🧩 React 19 Component Layer (src/components/)"]
+        FluidReveal["FluidHoverReveal.tsx\n(requestAnimationFrame · spring physics · clip-path polygon)"]
+        NavbarComp["Navbar.tsx\n(useState · AnimatePresence · anchor links)"]
+        SpeakersComp["Speakers.tsx\n(useState activeDay · AnimatePresence · CardEffects)"]
+        ScheduleComp["Schedule.tsx\n(whileInView · stagger · timeline)"]
+        OtherComps["ChancellorMessage · About · Highlights\nRegistration · Organizers · Accreditation\nSecureSpotButton · SecureSpotCTA · Footer"]
+    end
 
-### 2. Build & Deploy Pipeline
+    subgraph ExternalServices ["🌐 External Services & CDN"]
+        GoogleFonts["Google Fonts CDN\n(Orbitron · Geist · Geist Mono)"]
+        UnicornCDN["Unicorn Studio CDN\n(WebGL animated scene v1.5.3)"]
+        PublicAssets["/public/ Static Assets\n(Speaker JPGs · chancellor.webp · QRCODE.jpeg · hero bg)"]
+    end
 
-```
-┌─────────┐    ┌──────────┐    ┌───────────┐    ┌──────────┐    ┌──────────┐
-│  git    │───▶│  GitHub   │───▶│  CI/CD    │───▶│  Build   │───▶│  Deploy  │
-│  push   │    │  Repo     │    │  Trigger  │    │  Process │    │  to CDN  │
-└─────────┘    └──────────┘    └───────────┘    └──────────┘    └──────────┘
-                                                     │
-                                    ┌────────────────┼────────────────┐
-                                    ▼                ▼                ▼
-                              ┌──────────┐   ┌──────────┐   ┌──────────────┐
-                              │ TypeScript│   │ Tailwind │   │ Image        │
-                              │ Compile  │   │ Purge &  │   │ Optimization │
-                              │ & Bundle │   │ Minify   │   │ (WebP/AVIF)  │
-                              └──────────┘   └──────────┘   └──────────────┘
-```
+    subgraph BuildLayer ["🔨 Build & Deployment Layer"]
+        SWC["Next.js SWC Compiler\n(TypeScript transpile · tree-shake · SSG)"]
+        PostCSS["PostCSS + Tailwind v4\n(CSS purge · minify)"]
+        Vercel["Vercel / CDN Edge\n(Pre-rendered HTML · SSL · global edge caching)"]
+    end
 
-### 3. User Request Lifecycle
-
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                         USER REQUEST LIFECYCLE                               │
-│                                                                              │
-│  ┌─────────┐                                                                 │
-│  │  User   │                                                                 │
-│  │ Browser │                                                                 │
-│  └────┬────┘                                                                 │
-│       │  1. HTTP GET /                                                       │
-│       ▼                                                                      │
-│  ┌──────────┐    2. Cache    ┌──────────┐    3. Origin    ┌──────────────┐   │
-│  │ DNS +    │───────HIT?────▶│  CDN     │────── MISS ───▶│  Origin      │   │
-│  │ TLS      │                │  Edge    │                │  Server      │   │
-│  └──────────┘                │  Node    │                │  (.next/)    │   │
-│                              └────┬─────┘                └──────────────┘   │
-│                                   │                                          │
-│                                   │  4. Return pre-rendered HTML             │
-│                                   ▼                                          │
-│                           ┌───────────────┐                                  │
-│                           │  Browser      │                                  │
-│                           │  Receives     │                                  │
-│                           │  HTML + CSS   │                                  │
-│                           └───────┬───────┘                                  │
-│                                   │                                          │
-│                    ┌──────────────┼──────────────┐                           │
-│                    ▼              ▼              ▼                           │
-│            ┌─────────────┐ ┌──────────┐ ┌────────────────┐                  │
-│            │ 5. Hydrate  │ │ 6. Load  │ │ 7. Load        │                  │
-│            │ React 19    │ │ Fonts    │ │ Unicorn Studio │                  │
-│            │ (Client     │ │ (Google) │ │ (CDN Script)   │                  │
-│            │  Components)│ │          │ │                │                  │
-│            └──────┬──────┘ └──────────┘ └────────────────┘                  │
-│                   │                                                          │
-│                   ▼                                                          │
-│         ┌──────────────────┐                                                 │
-│         │ 8. Interactive   │                                                 │
-│         │ Page Ready       │                                                 │
-│         │                  │                                                 │
-│         │ • Navbar hover   │                                                 │
-│         │ • Fluid reveal   │                                                 │
-│         │ • Scroll anims   │                                                 │
-│         │ • Tab switching  │                                                 │
-│         │ • CTA animations │                                                 │
-│         └──────────────────┘                                                 │
-└──────────────────────────────────────────────────────────────────────────────┘
+    Clients <-->|DOM Events · State Updates| AppLayer
+    AppLayer -->|renders| Components
+    Components <-->|src / import| ExternalServices
+    AppLayer -->|npm run build| BuildLayer
+    BuildLayer -->|deploys| Vercel
 ```
 
-### 4. Component Interaction Flow
+---
 
+## 🔄 Detailed Page Load & Interaction Workflow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as User Browser
+    participant CDN as Vercel CDN Edge
+    participant NS as Next.js Origin Server
+    participant GF as Google Fonts CDN
+    participant UC as Unicorn Studio CDN
+
+    U->>CDN: 1. HTTP GET / (dhc2026.vercel.app)
+    CDN-->>NS: 2. Cache MISS → Forward to Origin
+    NS-->>CDN: 3. Return pre-rendered SSG HTML (page.tsx)
+    CDN-->>U: 4. Deliver HTML + Tailwind CSS bundle (< 200ms TTFB)
+    U->>GF: 5. Fetch Orbitron, Geist, Geist Mono fonts (next/font subset)
+    GF-->>U: 6. Fonts delivered (zero layout shift — preloaded)
+    U->>U: 7. React 19 Hydration (Client Components activate)
+    U->>U: 8. Navbar useState initialised — floating pill renders
+    U->>U: 9. FluidHoverReveal useEffect — RAF loop starts
+    U->>UC: 10. Unicorn Studio script loaded (afterInteractive strategy)
+    UC-->>U: 11. WebGL scene initialized on hero canvas
+    U->>U: 12. Framer Motion whileInView observers attach to all sections
+    U->>U: 13. Page fully interactive — all animations ready
+    U->>U: 14. User hovers Hero → spring physics clip-path morphing begins
+    U->>U: 15. User clicks Day 2 tab → AnimatePresence slide transition plays
+    U->>U: 16. User scrolls → ChancellorMessage, About, Highlights fade in sequentially
+    U->>U: 17. User clicks "Secure Your Spot" → Registration QR card reveals
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      COMPONENT INTERACTION MAP                          │
-│                                                                         │
-│  ┌─────────────────────────────────────────────────────────────────┐    │
-│  │                        RootLayout                               │    │
-│  │  ┌──────────┐                                                   │    │
-│  │  │  Navbar  │◄──── scroll-smooth anchor links (#hero, #about…)  │    │
-│  │  └──────────┘                                                   │    │
-│  │       │                                                         │    │
-│  │       ▼                                                         │    │
-│  │  ┌──────────────────────────────────────────────────────────┐   │    │
-│  │  │                     page.tsx                              │   │    │
-│  │  │                                                          │   │    │
-│  │  │  ┌────────────────────────────────────────────────────┐  │   │    │
-│  │  │  │  Hero                                              │  │   │    │
-│  │  │  │  ├── FluidHoverReveal (requestAnimationFrame loop) │  │   │    │
-│  │  │  │  │   ├── Base Image (1.jpg, z-10)                  │  │   │    │
-│  │  │  │  │   ├── Reveal Image (2.jpeg, z-20, clip-path)    │  │   │    │
-│  │  │  │  │   └── Dark Overlay (z-30)                       │  │   │    │
-│  │  │  │  └── SecureSpotButton ──▶ Registration QR           │  │   │    │
-│  │  │  └────────────────────────────────────────────────────┘  │   │    │
-│  │  │                          │                                │   │    │
-│  │  │                          ▼                                │   │    │
-│  │  │  ┌───────────────────────────────────────────────┐       │   │    │
-│  │  │  │  ChancellorMessage → About → Highlights       │       │   │    │
-│  │  │  │  (Scroll-triggered whileInView animations)    │       │   │    │
-│  │  │  └───────────────────────────────────────────────┘       │   │    │
-│  │  │                          │                                │   │    │
-│  │  │                          ▼                                │   │    │
-│  │  │  ┌───────────────────────────────────────────────┐       │   │    │
-│  │  │  │  Speakers (useState: activeDay)               │       │   │    │
-│  │  │  │  ├── Day Tab Buttons ──▶ setActiveDay()       │       │   │    │
-│  │  │  │  └── AnimatePresence ──▶ Speaker Cards        │       │   │    │
-│  │  │  │      └── CardEffects.module.css (3D hover)    │       │   │    │
-│  │  │  └───────────────────────────────────────────────┘       │   │    │
-│  │  │                          │                                │   │    │
-│  │  │                          ▼                                │   │    │
-│  │  │  ┌───────────────────────────────────────────────┐       │   │    │
-│  │  │  │  Schedule → Registration → Organizers         │       │   │    │
-│  │  │  │  → Accreditation → SecureSpotCTA → Footer     │       │   │    │
-│  │  │  └───────────────────────────────────────────────┘       │   │    │
-│  │  └──────────────────────────────────────────────────────────┘   │    │
-│  └─────────────────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────────────────┘
-```
-
-### Workflow Summary Table
-
-| Phase | Steps | Tools / Output |
-|---|---|---|
-| **Development** | Write components, style with Tailwind, animate with Framer Motion | VS Code → `npm run dev` → HMR preview |
-| **Build** | TypeScript compile, CSS purge, tree-shake, image optimize | `npm run build` → `.next/` output |
-| **Deploy** | Push to GitHub → CI/CD auto-deploy | Vercel / Netlify → CDN Edge |
-| **User Visit** | DNS → CDN → HTML response → React hydration → interactive page | Pre-rendered HTML + client-side React 19 |
-| **Interaction** | Navbar nav, fluid hover, scroll animations, tab switches, CTA clicks | Framer Motion + `requestAnimationFrame` + `useState` |
 
 ---
 
@@ -364,395 +178,331 @@ This section describes the end-to-end workflow — from development to the user'
 ```
 Digital-Horizon-Conclave-2026/
 │
-├── public/                          # Static assets (served at URL root "/")
-│   ├── 1.jpg                        # Hero section — base background image
-│   ├── 2.jpeg                       # Hero section — fluid hover-reveal image
-│   ├── QRCODE.jpeg                  # Registration QR code
-│   ├── chancellor.webp              # Chancellor profile photo
+├── public/                          # Static assets served at URL root "/"
+│   ├── 1.jpg                        # Hero — base background image (default visible)
+│   ├── 2.jpeg                       # Hero — fluid hover-reveal image (revealed on hover)
+│   ├── QRCODE.jpeg                  # Registration section QR code
+│   ├── chancellor.webp              # Chancellor Dr. Mariezenna Johnson portrait
 │   │
-│   ├── ArvindNeelakantan.jpg        # Speaker: Arvind Neelakandan (Epic Games)
-│   ├── DeepanRaj.jpg                # Speaker: Deepan Raj (HCL)
-│   ├── GaneshR.jpg                  # Speaker: Ganesh R (Monolith Asia)
-│   ├── Gayathri Shri.jpg            # Speaker: Gayathri Shri (Agreal Studios)
-│   ├── JainaresshBC.jpg             # Speaker: Jai Naressh (Cavin Infotech)
-│   ├── JoshuaJebadurai.jpg          # Speaker: Joshua Jebadurai (Weloadin)
-│   ├── KavithaKalyan.jpg            # Speaker: Kavitha Kalyan (TCS)
-│   ├── MarioRoyston.jpg             # Speaker: Mario Royston (Weloadin)
-│   ├── SridharSankar.jpg            # Speaker: Sridhar Shankar (Intrino Robotics)
-│   ├── VinodKumar.jpg               # Speaker: Vinod Kumar V (Phantom FX)
+│   ├── # ── Speaker Headshots (9 files) ──
+│   ├── ArvindNeelakantan.jpg        # Day 3: Aravind Neelakandan — Epic Games
+│   ├── DeepanRaj.jpg                # Day 1: Deepan Raj — HCL
+│   ├── GaneshR.jpg                  # Day 3: Ganesh R — Monolith Asia
+│   ├── Gayathri Shri.jpg            # Day 3: Gayathri Shri — Agreal Studios
+│   ├── JainaresshBC.jpg             # Day 3: Jai Naressh — Cavin Infotech
+│   ├── JoshuaJebadurai.jpg          # Day 2: Joshua Jebadurai — Weloadin
+│   ├── KavithaKalyan.jpg            # Day 1: Kavitha Kalyan — TCS
+│   ├── MarioRoyston.jpg             # Day 2: Mario Royston — Weloadin
+│   ├── SridharSankar.jpg            # Day 1: Sridhar Shankar — Intrino Robotics
+│   ├── VinodKumar.jpg               # Day 2: Vinod Kumar V — Phantom FX
 │   │
-│   └── [Default Next.js SVGs]       # file.svg, globe.svg, next.svg, vercel.svg, window.svg
+│   └── # ── Next.js Default SVG Icons ──
+│       file.svg · globe.svg · next.svg · vercel.svg · window.svg
 │
 ├── src/
 │   ├── app/                         # Next.js App Router root
 │   │   ├── favicon.ico              # Browser tab favicon
-│   │   ├── globals.css              # CSS custom properties, utilities, keyframes
-│   │   ├── layout.tsx               # Root layout (fonts, navbar, scripts, metadata)
-│   │   └── page.tsx                 # Home page — assembles all section components
+│   │   ├── globals.css              # Design system: CSS tokens, glass, neon, aurora keyframes
+│   │   ├── layout.tsx               # Root layout: fonts · navbar · Unicorn Studio · metadata
+│   │   └── page.tsx                 # Home page: 11-section component assembly pipeline
 │   │
-│   └── components/                  # All React UI components
-│       ├── Navbar.tsx               # Fixed floating pill navbar
-│       ├── Hero.tsx                 # Full-screen hero with CTA buttons
-│       ├── FluidHoverReveal.tsx     # Physics-based fluid mask animation (hero bg)
-│       ├── ChancellorMessage.tsx    # Chancellor's message section
-│       ├── About.tsx                # Event description section
-│       ├── Highlights.tsx           # Event highlights / key stats
-│       ├── Speakers.tsx             # Day-tabbed speaker grid cards
-│       ├── Schedule.tsx             # 3-day event timeline
-│       ├── Registration.tsx         # QR code + registration details
-│       ├── Organizers.tsx           # Organizing team display
-│       ├── Accreditation.tsx        # NAAC / institutional accreditation
+│   └── components/                  # 15 React UI components
+│       ├── Navbar.tsx               # Fixed floating pill navbar (mobile + desktop)
+│       ├── Hero.tsx                 # Full-screen landing with CTA and fluid background
+│       ├── FluidHoverReveal.tsx     # Custom physics animation: spring + clip-path polygon
+│       ├── ChancellorMessage.tsx    # Chancellor portrait + official welcome message
+│       ├── About.tsx                # Event description: AI, Gaming, XR, Robotics, IoT
+│       ├── Highlights.tsx           # 5-card grid: Expert Speakers, AI Tech, Gaming, Insights, Career
+│       ├── Speakers.tsx             # 3-day tabbed speaker card grid with AnimatePresence
+│       ├── Schedule.tsx             # 3-day event timeline with whileInView stagger
+│       ├── Registration.tsx         # QR code scan-to-register portal card
+│       ├── Organizers.tsx           # Event organizing committee member display
+│       ├── Accreditation.tsx        # NAAC / institutional accreditation display
 │       ├── SecureSpotButton.tsx     # Standalone animated registration CTA button
-│       ├── SecureSpotCTA.tsx        # Full-width pre-footer CTA section
-│       ├── Footer.tsx               # Site footer
-│       └── CardEffects.module.css   # CSS Module — 3D card hover tilt effect
+│       ├── SecureSpotCTA.tsx        # Full-width pre-footer conversion CTA section
+│       ├── Footer.tsx               # Site footer with links, credits, socials
+│       └── CardEffects.module.css   # CSS Module: 3D perspective card tilt on hover
 │
-├── hover-reveal.html                # Standalone prototype for fluid reveal (dev only)
-├── hover-reveal.css                 # Styles for standalone prototype
-├── hover-reveal.js                  # Logic for standalone prototype
+├── hover-reveal.html                # Standalone prototype for fluid reveal testing
+├── hover-reveal.css                 # Standalone prototype styles
+├── hover-reveal.js                  # Standalone prototype physics logic
 │
+├── .gitignore                       # Git ignore rules
 ├── next.config.ts                   # Next.js configuration
-├── postcss.config.mjs               # PostCSS / Tailwind compilation config
-├── eslint.config.mjs                # ESLint rules (extends eslint-config-next)
-├── tsconfig.json                    # TypeScript compiler config
+├── postcss.config.mjs               # PostCSS + Tailwind pipeline config
+├── eslint.config.mjs                # ESLint v9 rules (extends next config)
+├── tsconfig.json                    # TypeScript strict compiler options
 ├── package.json                     # Dependencies & npm scripts
-├── package-lock.json                # Lockfile (committed for reproducible installs)
+├── package-lock.json                # Lockfile for reproducible installs
 └── README.md                        # Project documentation (this file)
 ```
 
 ---
 
-## 🧩 Component Breakdown
+## ⚙️ Installation & Usage Guide
 
-### `layout.tsx` — Root Layout
-The application shell, wrapping every page.
+### Prerequisites
 
-**Responsibilities:**
-- Loads **Google Fonts** via `next/font/google`:
-  - `Geist` → body text (`--font-geist-sans`)
-  - `Geist Mono` → monospace (`--font-geist-mono`)
-  - `Orbitron` → futuristic headings (`--font-orbitron`)
-- Exports **Next.js `Metadata`** object (title, description) for SEO
-- Injects `<Navbar />` above page content
-- Bootstraps **Unicorn Studio** animated background library via two `<Script>` tags with `strategy="afterInteractive"`:
-  1. Lazy-loads the UnicornStudio UMD bundle from jsDelivr CDN
-  2. Re-initializes on DOM-ready for hot-reload compatibility
+- **Node.js:** v18.0.0 or higher (v20+ recommended)
+- **npm:** v9.0.0 or higher
+- **Git:** Installed on system
+
+### Step 1: Clone Repository & Install Dependencies
+
+```bash
+git clone https://github.com/goprocker/Digital-Horizon-Conclave-2026.git
+cd Digital-Horizon-Conclave-2026
+npm install
+```
+
+### Step 2: Run Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser at [http://localhost:3000](http://localhost:3000).
+
+> The development server supports **Hot Module Replacement (HMR)** — all component changes reflect instantly without a full page reload.
+
+### Step 3: Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+The production build generates a fully optimized `.next/` output with pre-rendered HTML, purged CSS, and compressed JS bundles.
 
 ---
+
+## 🧩 Component Documentation
+
+### `FluidHoverReveal.tsx` — Physics Animation Engine
+
+The most technically sophisticated component. Implements a fluid hover-reveal interaction using pure DOM APIs — no Canvas, no WebGL required.
+
+```
+Pipeline:
+  window mousemove → position tracking → spring interpolation
+       → morph point spring physics → clip-path polygon
+       → CSS clipPath applied to reveal image at 60fps
+```
+
+| Configuration | Value | Effect |
+|---|---|---|
+| `ease` | `0.08` | Cursor follow lag — lower = more sluggish, cinematic |
+| `radiusEase` | `0.12` | Speed of mask grow/shrink on hover enter/exit |
+| `maxRadius` | `20%` | Maximum bubble reveal size |
+| `numPoints` | `12` | Polygon vertex count — higher = smoother blob |
+| `spring` | `0.15` | Deformation spring force |
+| `friction` | `0.7` | Velocity damping per frame |
+
+### `Speakers.tsx` — Day-Tabbed Speaker Grid
+
+Tab-driven speaker section with animated transitions between days.
+
+| Property | Value |
+|---|---|
+| State | `useState<string>("day1")` |
+| Transition | `AnimatePresence mode="wait"` slide X |
+| Card Effect | `CardEffects.module.css` — CSS 3D perspective tilt |
+| Data Source | Inline TypeScript `speakersData` object — 9 speakers × 3 days |
 
 ### `Navbar.tsx` — Floating Pill Navigation
 
-A **fixed, glassmorphic** navigation bar centred at the top of the viewport.
+Fixed glassmorphic pill navbar centered at `top: 2rem`.
 
-- `position: fixed; top: 2rem` — floats above page content
-- **Desktop (lg+):** Horizontal link list + prominent "Registration" button
-- **Mobile:** Compact brand + "Register" button + hamburger icon; dropdown animated with `AnimatePresence`
-- Uses `useState` to track `isOpen` mobile menu state
-- **Nav links:** Home · About · Highlights · Speakers · Schedule · Team · Contact
-
----
-
-### `Hero.tsx` — Full-Screen Landing
-
-The primary above-the-fold section.
-
-- Full viewport height (`min-h-screen`) with centered content
-- Uses **`<FluidHoverReveal />`** as an interactive animated background layer
-- Institution name badge + "NATIONAL LEVEL TECHNICAL SYMPOSIUM" pill
-- Large `h1` in `font-orbitron`, neon gradient (`from-white via-blue-200 to-primary`)
-- Event meta-info row: Date / Time / Venue with Lucide icons
-- **Two CTA buttons:**
-  - `<SecureSpotButton />` — primary animated registration CTA
-  - "View Schedule" — secondary anchor link to `#schedule`
-- Fade-in-up entry animation via Framer Motion
-
----
-
-### `FluidHoverReveal.tsx` — Interactive Fluid Mask Animation
-
-The hero's interactive background — a custom physics simulation built with pure DOM APIs.
-
-**Architecture:**
-```
-┌───────────────────────────────────────────────────┐
-│  <div ref={containerRef}>  (absolute, inset-0)    │
-│                                                   │
-│  [z-10] <img src="1.jpg" />   ← Base image        │
-│  [z-20] <img src="2.jpeg" />  ← Reveal image      │
-│            └─ clip-path: polygon(...)             │
-│  [z-30] <div> bg-black/40 </div>  ← Dark overlay  │
-└───────────────────────────────────────────────────┘
-```
-
-**Animation loop (requestAnimationFrame):**
-1. Global `mousemove` listener tracks cursor relative to container
-2. Target position and radius updated on hover enter/exit
-3. Each frame:
-   - Current position lerped toward target (`ease: 0.08`)
-   - Current radius lerped toward target (`radiusEase: 0.12`)
-   - 12 morph points updated with spring-physics offsets
-   - `clip-path: polygon(...)` computed from morphed circle points
-   - Applied to reveal image via `style.clipPath`
-
-| Config | Value | Description |
-|---|---|---|
-| `ease` | 0.08 | Position follow delay |
-| `radiusEase` | 0.12 | Mask growth/shrink speed |
-| `maxRadius` | 20% | Maximum reveal bubble size |
-| `numPoints` | 12 | Polygon smoothness |
-| `spring` | 0.15 | Deformation spring force |
-| `friction` | 0.7 | Deformation damping |
-
----
-
-### `ChancellorMessage.tsx` — Chancellor's Welcome
-
-- Full-width section with Chancellor's profile photo and message
-- `whileInView` scroll-triggered animation
-- Glassmorphic card with neon border accent
-
----
-
-### `About.tsx` — Event Description
-
-- Centered text section describing the conclave's purpose
-- Highlights technology focus areas: AI, Gaming, XR, Robotics, UI/UX, IoT
-- `whileInView` fade-in animation with subtle background gradient
-
----
-
-### `Highlights.tsx` — Key Statistics
-
-Showcase grid of notable event highlights (speaker count, topics, audience size, etc.), each rendered as a stat/feature card with Framer Motion stagger.
-
----
-
-### `Speakers.tsx` — Distinguished Speakers (3-Day Tabbed)
-
-Tab switcher with animated content transitions.
-
-- **Tab bar:** Three pill buttons (Day 1 / Day 2 / Day 3) with dates
-- **Active tab styling:** `bg-primary text-black` with neon glow shadow
-- **Card grid:** 3 columns on desktop, 1–2 on mobile
-- **Card content:** Speaker photo (circular, gradient border), name, role, time slot, LinkedIn icon, talk title
-- `AnimatePresence mode="wait"` for slide-in/out transitions between days
-- 3D card hover effect via `CardEffects.module.css`
-
----
-
-### `Schedule.tsx` — 3-Day Event Timeline
-
-Vertical timeline for all 9 sessions across 3 days.
-
-- `whileInView` stagger animation per day group
-- Each session: time | talk title | speaker name + company
-- `border-l-2` timeline track on mobile, hidden on desktop
-
----
-
-### `Registration.tsx` — Registration Info
-
-Displays the event registration QR code (`QRCODE.jpeg`) and associated instructions for participants to register.
-
----
-
-### `Organizers.tsx` — Organizing Team
-
-Displays the event organizing committee members with their names and roles.
-
----
-
-### `Accreditation.tsx` — Institutional Accreditation
-
-Shows Sathyabama's NAAC accreditation grade and related institutional achievements.
-
----
-
-### `SecureSpotButton.tsx` — Animated CTA Button
-
-A standalone, animated registration button used inline within `<Hero />` and other sections. Features hover/tap animations via Framer Motion.
-
----
-
-### `SecureSpotCTA.tsx` — Full-Width CTA Section
-
-A dedicated pre-footer section with a large headline, subtext, and the `<SecureSpotButton />` to drive final conversions before the footer.
-
----
-
-### `Footer.tsx` — Site Footer
-
-- Event brand + tagline
-- Quick navigation links
-- Social media icons
-- Department and institution credits
-- Copyright notice
+| Breakpoint | Behavior |
+|---|---|
+| `lg+` (Desktop) | Horizontal link list + Registration CTA button |
+| `< lg` (Mobile) | Compact brand + hamburger → animated `AnimatePresence` dropdown |
 
 ---
 
 ## 🎨 Design System
 
-All tokens defined in `src/app/globals.css`:
+All design tokens are defined in [`src/app/globals.css`](src/app/globals.css):
 
 ### Color Tokens
 
-| Token | Hex | Role |
+| Token | Value | Role |
 |---|---|---|
 | `--background` | `#020617` | Page background — Deep Space Blue/Black |
 | `--foreground` | `#f8fafc` | Primary text — Near white |
-| `--primary` | `#00f0ff` | Neon Cyan — CTAs, accents, highlights |
+| `--primary` | `#00f0ff` | Neon Cyan — CTAs, speaker accents, tab active states |
 | `--secondary` | `#1e1b4b` | Navy — secondary surfaces |
 | `--accent` | `#3b82f6` | Blue — links, secondary highlights |
 | `--muted` | `#475569` | Slate — subdued text, borders |
 | `--card` | `rgba(15,23,42,0.6)` | Glassmorphic card base |
 
-### Typography Scale
+### Typography
 
-| Font Family | Variable | Weight | Usage |
+| Font | Variable | Weights | Usage |
 |---|---|---|---|
-| Geist Sans | `--font-geist-sans` | 400–700 | Body text, UI labels |
-| Geist Mono | `--font-geist-mono` | 400 | Code, time slots |
-| Orbitron | `--font-orbitron` | 400–900 | Headings, brand name, hero title |
+| Orbitron | `--font-orbitron` | 400–900 | Headings, event title, section titles |
+| Geist Sans | `--font-geist-sans` | 400–700 | Body text, descriptions, nav links |
+| Geist Mono | `--font-geist-mono` | 400 | Time slots, code snippets |
 
 ### Utility Classes
 
-| Class | CSS Effect |
+| Class | Effect |
 |---|---|
-| `.glass` | `background: rgba(15,23,42,0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1)` |
+| `.glass` | `backdrop-filter: blur(12px)` + semi-transparent bg + 1px white/10 border |
 | `.neon-text` | `text-shadow: 0 0 10px rgba(0,240,255,0.5)` |
 | `.neon-border` | `box-shadow: 0 0 10px rgba(0,240,255,0.2)` |
-| `.animate-aurora` | Infinite gradient pan animation (`aurora-flow` keyframes, 20s) |
-| `.bg-noise` | SVG fractal noise texture overlay |
-
----
-
-## ✨ Key Features
-
-| Feature | Implementation |
-|---|---|
-| 🖱️ Fluid Hover Reveal | Custom `requestAnimationFrame` loop + CSS `clip-path` polygon morphing with spring physics |
-| 🌊 Glassmorphism | `.glass` utility class with `backdrop-filter: blur` |
-| 💫 Scroll Animations | Framer Motion `whileInView` + `AnimatePresence` |
-| 📱 Responsive | Tailwind mobile-first breakpoints + hamburger menu |
-| ⚓ Smooth Scroll Nav | `scroll-smooth` on `<html>` + anchor links |
-| 🔡 Premium Fonts | Orbitron for futuristic headings, Geist for clean body copy |
-| 🌑 Dark Theme | `#020617` deep space background |
-| 🎨 Neon Accents | `#00f0ff` cyan glow throughout |
-| 🎭 3D Card Effects | CSS Module perspective + translateZ hover |
-| ♿ Semantic HTML | `<nav>`, `<main>`, `<section>`, `<footer>` structure |
+| `.animate-aurora` | Infinite `aurora-flow` gradient shift animation (20s, ease, infinite) |
+| `.bg-noise` | SVG fractal noise texture overlay at `opacity: 0.05` |
 
 ---
 
 ## 📅 Event Schedule
 
-### Day 1 — February 23, 2026
+### Day 1 — February 23, 2026 (AI & Design)
 
-| Time | Session | Speaker | Company |
+| Time | Session Title | Speaker | Company |
 |---|---|---|---|
 | 10:30–11:30 AM | Beyond the Screen: How UI/UX is Redefining Digital Reality | Kavitha Kalyan | TCS |
-| 11:45–1:00 PM | Generative AI Unleashed: A Tool for Automation or a New Intelligence? | Deepan Raj | HCL |
+| 11:45 AM–1:00 PM | Generative AI Unleashed: A Tool for Automation or a New Intelligence? | Deepan Raj | HCL |
 | 2:00–3:00 PM | Next-Gen Robotics: Bridging the Gap Between Humans and Machines | Sridhar Shankar | Intrino Robotics |
 
-### Day 2 — February 24, 2026
+### Day 2 — February 24, 2026 (Gaming & Design)
 
-| Time | Session | Speaker | Company |
+| Time | Session Title | Speaker | Company |
 |---|---|---|---|
 | 10:00–11:30 AM | Human-Centric Design: The Secret Code to Digital Success | Vinod Kumar V | Phantom FX |
-| 11:45–1:00 PM | The Psychology of Play: How Game Design Hooks the Mind | Mario Royston | Weloadin |
+| 11:45 AM–1:00 PM | The Psychology of Play: How Game Design Hooks the Mind | Mario Royston | Weloadin |
 | 2:00–3:00 PM | Next-Gen Gaming: A Technological Leap or a Creative Shift? | Joshua Jebadurai | Weloadin |
 
-### Day 3 — February 25, 2026
+### Day 3 — February 25, 2026 (XR & Smart Realities)
 
-| Time | Session | Speaker | Company |
+| Time | Session Title | Speaker | Company |
 |---|---|---|---|
 | 10:00–11:30 AM | Building Worlds: The Power of Unreal in Modern Simulation | Aravind Neelakandan | Epic Games |
-| 11:45–1:00 PM | Extended Reality: Blurring the Lines Between Physical and Digital | Ganesh R | Monolith Asia |
+| 11:45 AM–1:00 PM | Extended Reality: Blurring the Lines Between Physical and Digital | Ganesh R | Monolith Asia |
 | 2:00–3:00 PM | Smart World: How Intelligent IoT is Reshaping Our Lives | Jai Naressh | Cavin Infotech |
 
 ---
 
-## 🎤 Speakers
+## 🎤 Speakers Directory
 
 | Name | Role | Company | Topic Area |
 |---|---|---|---|
 | Kavitha Kalyan | Director of Design | TCS | UI/UX Design |
 | Deepan Raj | Director of Design | HCL | Generative AI |
-| Sridhar Shankar | Founder & CEO | Intrino Robotics | Robotics |
+| Sridhar Shankar | Founder & CEO | Intrino Robotics | Next-Gen Robotics |
 | Vinod Kumar V | Senior L&D Professional | Phantom FX | Human-Centric Design |
-| Mario Royston | Co-Founder | Weloadin | Game Design |
-| Joshua Jebadurai | Game Developer | Weloadin | Gaming Technology |
-| Ms. Gayathri Shri | Creative Director | Agreal Studios | Augmented Reality |
+| Mario Royston | Co-Founder | Weloadin | Game Psychology |
+| Joshua Jebadurai | Game Developer | Weloadin | Next-Gen Gaming |
+| Ms. Gayathri Shri | Creative Director | Agreal Studios | Snap AR / Social XR |
 | Ganesh R | Vice President | Monolith Asia | Extended Reality (XR) |
-| Jai Naressh | Director | Cavin Infotech | IoT / Smart Systems |
+| Jai Naressh | Director | Cavin Infotech | Smart IoT Systems |
 
 ---
 
-## 🚀 Getting Started
+## 🧠 UI/UX Animation Pipeline
 
-### Prerequisites
+### Multi-Layer Animation Architecture
 
-- **Node.js** >= 18.x
-- **npm** >= 9.x (or `yarn` / `pnpm`)
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-org/Digital-Horizon-Conclave-2026.git
-cd Digital-Horizon-Conclave-2026
-
-# 2. Install all dependencies
-npm install
-
-# 3. Start the development server
-npm run dev
+```
+[ User Input Layer ]
+        │
+        ├── Mouse → FluidHoverReveal (60fps RAF loop, spring physics)
+        ├── Scroll → Framer Motion whileInView (all section components)
+        ├── Click → AnimatePresence (Speaker tabs, Mobile menu)
+        └── Mount → motion.div initial/animate (Hero fade-in-up)
+                      │
+                      ▼
+┌──────────────────────────────────────────────────────────┐
+│ 1. FluidHoverReveal Engine                               │
+│    requestAnimationFrame → position lerp → morph points  │
+│    → polygon clip-path → CSS applied to img element      │
+└─────────────────────────┬────────────────────────────────┘
+                          │
+                          ▼
+┌──────────────────────────────────────────────────────────┐
+│ 2. Framer Motion Scroll Engine                           │
+│    IntersectionObserver → whileInView triggers           │
+│    opacity: 0→1, y: 20→0, stagger delay per item        │
+└─────────────────────────┬────────────────────────────────┘
+                          │
+                          ▼
+┌──────────────────────────────────────────────────────────┐
+│ 3. AnimatePresence Transition Engine                     │
+│    mode="wait" → exit old → enter new                    │
+│    Speaker tabs: slide X ±20px                           │
+│    Mobile nav: slide Y -20px, opacity fade               │
+└──────────────────────────────────────────────────────────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-> The development server supports **Hot Module Replacement (HMR)** — changes reflect instantly without a full reload.
-
----
-
-## 📜 Scripts
-
-| Script | Command | Description |
-|---|---|---|
-| **Development** | `npm run dev` | Start Next.js dev server with HMR |
-| **Production Build** | `npm run build` | Compile and optimize for production |
-| **Production Start** | `npm run start` | Serve the production build locally |
-| **Lint** | `npm run lint` | Run ESLint across the codebase |
+1. **Custom Spring Physics:** The `FluidHoverReveal` component manages all animation state via `useRef` (not `useState`) to avoid unnecessary re-renders at 60fps.
+2. **CSS GPU Acceleration:** `will-change: clip-path` is set on the reveal image to offload polygon computation to the GPU compositor thread.
+3. **Scroll Viewport Optimization:** `viewport={{ once: true }}` ensures each `whileInView` animation fires exactly once — no re-animation on scroll-back.
 
 ---
 
-## 🌍 Deployment
+## 🔒 Performance & Optimization
 
-### Vercel (Recommended)
-
-This project is built for **Vercel** — the native Next.js deployment platform.
-
-```bash
-# Install Vercel CLI globally
-npm install -g vercel
-
-# Deploy from project root
-vercel
-```
-
-Follow the prompts to link your repository. Subsequent pushes to `main` auto-deploy.
-
-### Other Providers
-
-Any provider that supports Node.js can run this project:
-
-```bash
-npm run build    # Generates .next/ output folder
-npm run start    # Serves on port 3000 (configurable)
-```
+- **Font Strategy:** `next/font/google` preloads and self-hosts all fonts with zero external requests at runtime, eliminating Google Fonts FOUT.
+- **Script Loading:** Unicorn Studio CDN loaded with `strategy="afterInteractive"` — never blocks initial render or hydration.
+- **Image Assets:** Speaker headshots served directly from `/public/` — Next.js `<Image>` component used for the Chancellor portrait with automatic WebP conversion.
+- **CSS Purging:** Tailwind CSS v4 with PostCSS eliminates all unused utility classes at build time.
+- **Code Splitting:** Next.js App Router automatically code-splits per route — the home page bundle loads only its required components.
+- **Bundle Target:** Initial page load < 1.5s on 4G networks; Core Web Vitals — LCP < 2.5s, CLS < 0.01, INP < 100ms.
 
 ---
 
-## 📄 License
+## 🧪 Testing & Validation
+
+- **TypeScript Strict Mode:** All component props, state types, and event handlers are fully typed — zero `any` in production paths.
+- **ESLint:** `eslint-config-next` enforces Next.js best practices including accessibility hints and import order.
+- **Build Validation:** `npm run build` compiles the full TypeScript + Tailwind pipeline and reports any type errors or missing modules before deployment.
+- **Cross-Device Testing:** Responsive at all standard breakpoints — 375px (iPhone SE), 768px (iPad), 1280px (laptop), 1920px (desktop).
+
+---
+
+## 🚧 Challenges Faced & Future Scope
+
+### Challenges Overcome
+
+1. **Z-Index Occlusion in Fluid Reveal:** The hero text overlay (`pointer-events-auto`) blocked mouse events from reaching the background container. Solved by attaching the `mousemove` listener to `window` and computing `getBoundingClientRect()` manually to detect container bounds.
+2. **Unicorn Studio Hot Reload Conflicts:** The CDN script initialized once and did not reinitialize on Next.js fast-refresh. Solved with a `DOMContentLoaded` re-init script and the `isInitialized` guard flag.
+3. **AnimatePresence Speaker Tab Flicker:** Initial `AnimatePresence` setup caused a flash on first render. Resolved by using `mode="wait"` to ensure the exit animation fully completes before the enter animation begins.
+4. **Tailwind v4 `@theme` Token System:** The new Tailwind v4 `@theme inline` block syntax was incompatible with v3 `theme.extend` configs. Fully migrated to the v4 CSS-native token system.
+
+### Future Scope
+
+- **Live Registration Counter:** Real-time seat count connected to a Supabase table — shows remaining seats dynamically with SSE push updates.
+- **Multi-Day Countdown Timer:** Animated real-time countdown clock to event start date with flip-card animation.
+- **Speaker Networking Portal:** Post-event section where attendees can connect with speakers via LinkedIn — requires JWT auth and form submission.
+- **Post-Event Gallery:** Photo/video gallery section with masonry grid layout and lazy loading.
+- **PWA Support:** Service worker and `manifest.json` to enable "Add to Home Screen" for mobile attendees.
+
+---
+
+## 📽️ Demo & Media
+
+- **Hero Fluid Reveal:** Interactive physics-based hover animation on the full-screen landing section.
+- **Speaker Tab Transitions:** Day-by-day animated speaker card grid with LinkedIn profile links.
+- **Scroll Animation Cascade:** Sequential fade-in-up animations across Chancellor, About, Highlights, Schedule, and CTA sections.
+
+*(Refer to standalone prototype `hover-reveal.html` for isolated fluid animation testing)*
+
+---
+
+## 📚 References
+
+1. **Next.js Documentation:** App Router, `next/font`, `next/image`, Server & Client Components — [nextjs.org/docs](https://nextjs.org/docs)
+2. **Framer Motion API:** `motion`, `AnimatePresence`, `whileInView`, `viewport` — [framer.com/motion](https://www.framer.com/motion/)
+3. **Tailwind CSS v4:** `@import "tailwindcss"`, `@theme inline`, `@layer utilities` — [tailwindcss.com](https://tailwindcss.com/)
+4. **Unicorn Studio:** WebGL animated scene CDN loader — [unicorn.studio](https://unicorn.studio/)
+5. **Lucide React:** SVG icon library — [lucide.dev](https://lucide.dev/)
+6. **Google Fonts:** Orbitron, Geist, Geist Mono typeface specifications — [fonts.google.com](https://fonts.google.com/)
+7. **CSS `clip-path` Specification:** MDN Web Docs — polygon() and spring physics morphing techniques.
+
+---
+
+## 📜 License
 
 This project is proprietary and developed exclusively for the **Digital Horizon Conclave 2026** at **Sathyabama Institute of Science and Technology**. All rights reserved.
 
@@ -760,7 +510,7 @@ This project is proprietary and developed exclusively for the **Digital Horizon 
 
 <div align="center">
 
-Designed & Developed with ❤️ by **Gopinath**
+Designed & Developed with ❤️ by **Gopinath R**
 
 *Sathyabama Institute of Science and Technology · School of Computing · Dept. of Computer Science & Engineering*
 
